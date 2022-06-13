@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "kraneabel",
+    "password": "password1",
+    "database": "corkboardit",
+    "host": "localhost",
+    "dialect": "mssql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "corkboardit",
+    "host": "localhost",
+    "dialect": "mssql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "corkboardit",
+    "host": "localhost",
+    "dialect": "mssql"
+  }
+}
