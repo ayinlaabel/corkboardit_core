@@ -62,3 +62,15 @@ exports.getAllCorkboard = async (req, res, next) => {
 
   res.send(corkboard);
 };
+
+exports.getCorkboardById = async (req, res, next) => {
+  await sequelize.authenticate();
+
+  const corkboard = await db.Corkboard.findOne({
+    where: {
+      id: req.body.id,
+    },
+  });
+  
+  res.send(corkboard);
+};
