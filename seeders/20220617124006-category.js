@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const _DATA = require("../database/data");
+const __category = require('../database/categories')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -12,9 +12,9 @@ module.exports = {
      *   name: 'John Doe',
      *   isBetaMember: false
      * }], {});
-     */
+    */
 
-    await queryInterface.bulkInsert("Users", _DATA, {});
+      await queryInterface.bulkInsert('Categories', __category, {});
   },
 
   down: async (queryInterface, Sequelize) => {
@@ -24,5 +24,5 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-  },
+  }
 };

@@ -14,6 +14,7 @@ const { indexRoute, staticRoute } = require("./routes/index");
  * Body Parser Middleware
  */
 app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: true }));
 
 /**
  * Cors Origin Middleware

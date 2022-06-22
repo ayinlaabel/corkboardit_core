@@ -1,6 +1,6 @@
 'use strict';
 
-const _Category = require('../database/categories');
+const __user = require('../database/data')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -14,7 +14,7 @@ module.exports = {
      * }], {});
     */
 
-     await queryInterface.bulkInsert('Categories', _Category, {});
+     await queryInterface.bulkInsert('Users', __user, {});
   },
 
   down: async (queryInterface, Sequelize) => {
