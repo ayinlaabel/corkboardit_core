@@ -10,6 +10,7 @@ router.get("/corkboard/getAll", routeCtrl.getAllCorkboard);
 router.post("/login", routeCtrl.login);
 router.post("/corkboard", authCtrl.verifyToken, routeCtrl.corkBoard);
 router.post("/corkboard/byId", routeCtrl.getCorkboardById);
+router.post("/corkboard/private", routeCtrl.getPrivateCorkboard);
 router.post("/corkboard/get-corkboard-byUserId", routeCtrl.getCorkbyUserId);
 
 router.post("/corkboard/user", routeCtrl.getUserById);

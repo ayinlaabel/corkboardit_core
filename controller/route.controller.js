@@ -96,6 +96,23 @@ exports.getCorkbyUserId = async (req, res, next) => {
   res.status(200).send(corkboard);
 };
 
+exports.getPrivateCorkboard = async (req, res, next) => {
+  await sequelize.authenticate();
+
+  const corkboard = await db.Corkboard.findOne({
+    where: {
+      id: req.body.id,
+      password: req.body.password,
+    },
+  });
+
+  if (!corkboard) {
+    res.status(400).send({ error: "Something went wrong!" });
+  } else {
+    res.status(200).send(corkboard);
+  }
+};
+
 exports.getUserById = async (req, res, next) => {
   await sequelize.authenticate();
   const user = await db.User.findOne({
